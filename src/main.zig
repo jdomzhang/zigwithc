@@ -2,7 +2,7 @@ const std = @import("std");
 const print = std.debug.print;
 
 const withc = @cImport({
-    @cInclude("myadd.h");
+    @cInclude("my.h");
 });
 
 pub fn main() void {
