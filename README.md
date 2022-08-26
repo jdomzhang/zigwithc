@@ -1,12 +1,14 @@
-# `zig` with `c`
-This is a very simple example project to demonstrate working zig with c lang.
+# `Zig` with `C`
+This is a very simple example to demonstrate how `Zig` works with `C`.
 
 # Run
+Use below script to run it.
 ```bash
 zig build run
 ```
 
 # Test
+Use below script to test it.
 ```bash
 zig build test
 ```
@@ -19,10 +21,10 @@ It's in `build.zig`, the magic code is here.
 fn withC(exe: *std.build.LibExeObjStep) void {
     const c_args = [_][]const u8{
         "-std=c99",
-        "-Isrc/vendor",
+        "-Isrc/vendor/include",
     };
     // exe.linkLibC();
-    exe.addIncludeDir("src/vendor");
+    exe.addIncludeDir("src/vendor/include");
     exe.addCSourceFile("src/vendor/myadd.c", &c_args);
 }
 ```

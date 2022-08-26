@@ -38,9 +38,9 @@ pub fn build(b: *std.build.Builder) void {
 fn withC(exe: *std.build.LibExeObjStep) void {
     const c_args = [_][]const u8{
         "-std=c99",
-        "-Isrc/vendor",
+        "-Isrc/vendor/include",
     };
     // exe.linkLibC();
-    exe.addIncludeDir("src/vendor");
+    exe.addIncludeDir("src/vendor/include");
     exe.addCSourceFile("src/vendor/myadd.c", &c_args);
 }
