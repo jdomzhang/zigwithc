@@ -2,13 +2,13 @@
 This is a very simple example to demonstrate how `Zig` works with `C`.
 
 # Run
-Use below script to run it.
+Use below script to run.
 ```bash
 zig build run
 ```
 
 # Test
-Use below script to test it.
+Use below script to test.
 ```bash
 zig build test
 ```
